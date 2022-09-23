@@ -17,7 +17,7 @@ resource "google_compute_subnetwork" "subnet" {
 }
 
 resource "google_container_cluster" "primary" {
-  name     = "hello-gke"
+  name     = var.namespace
   location = var.region
   min_master_version = "1.22"
   remove_default_node_pool = true

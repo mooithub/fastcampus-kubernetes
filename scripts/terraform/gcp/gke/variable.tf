@@ -1,15 +1,19 @@
 variable "project" {
   description = "GCP에 있는 프로젝트 이름 변수"
-  default = "<your-pojrect-id>" 
+  type = string 
 }
 
 variable "region" {
-  default = "<your-region>" 
+  type = string 
+}
+
+variable "namespace" {
+  type = string 
 }
 
 variable "credentials" {
   description = "GCP에 액세스하기 위한 json 파일"
-  default = "<your-file-path>"
+  type = string
 }
 
 variable "gke_num_nodes" {
